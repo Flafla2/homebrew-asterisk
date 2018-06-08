@@ -109,7 +109,7 @@ class TurnWireshark < Formula
     end
   end
 
-  def caveats; <<~EOS.undent
+  def caveats; <<~EOS
     To better decode WebRTC/TURN traffic, the devel and HEAD installs have a
     very hackish patch applied to them.
 
