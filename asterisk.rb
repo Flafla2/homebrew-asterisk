@@ -135,8 +135,8 @@ class Asterisk < Formula
     # Some Asterisk code doesn't follow strict aliasing rules
     ENV.append "CFLAGS", "-fno-strict-aliasing"
     # Fix lua install directory
-    ENV.append "CFLAGS", "-I/usr/local/include/lua/"
-    ENV.append "CFLAGS", "-DLUA_INCLUDE_DIR=/usr/local/include/lua/"
+    ENV.append "CFLAGS", "-I/usr/local/include/lua"
+    ENV.append "CFLAGS", "-DLUA_INCLUDE_DIR=/usr/local/include/lua"
 
     system "./configure", "--prefix=#{prefix}",
                           "--sysconfdir=#{etc}",
