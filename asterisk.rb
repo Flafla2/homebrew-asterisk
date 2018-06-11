@@ -59,6 +59,11 @@ class Asterisk < Formula
     end
   end
 
+  patch do
+    url "https://raw.githubusercontent.com/Flafla2/homebrew-asterisk/master/patches/01-brew-fixed-lua-include.patch"
+    sha256 "73d823c07d32bf70f6e26ea133b4218c2ffd22946117373089f20c0ca9e816f2"
+  end
+
   option "with-dev-mode", "Enable dev mode in Asterisk"
   option "with-clang", "Compile with clang (default)"
   option "with-gcc", "Compile with gcc instead of clang"
