@@ -114,7 +114,6 @@ class Asterisk < Formula
   depends_on "speex"
   depends_on "sqlite"
   depends_on "srtp"
-  depends_on "lua"
 
   def install
     langs = %w[en en-au en-gb es fr it ru ja sv].select do |lang|
