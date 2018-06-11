@@ -1,8 +1,16 @@
-44,46c44,46
-< #include <lua.h>
-< #include <lauxlib.h>
-< #include <lualib.h>
----
-> #include <lua/lua.h>
-> #include <lua/lauxlib.h>
-> #include <lua/lualib.h>
+diff -x '.*' -ru a/pbx/pbx_lua.c b/pbx/pbx_lua.c
+--- a/pbx/pbx_lua.c	2017-12-22 14:27:41.000000000 -0800
++++ b/pbx/pbx_lua.c	2018-06-11 12:02:20.000000000 -0700
+@@ -41,9 +41,9 @@
+ #include "asterisk/paths.h"
+ #include "asterisk/hashtab.h"
+ 
+-#include <lua.h>
+-#include <lauxlib.h>
+-#include <lualib.h>
++#include <lua/lua.h>
++#include <lua/lauxlib.h>
++#include <lua/lualib.h>
+ 
+ static char *config = "extensions.lua";
+ static char *registrar = "pbx_lua";
