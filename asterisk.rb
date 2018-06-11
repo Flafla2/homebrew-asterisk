@@ -64,8 +64,6 @@ class Asterisk < Formula
     sha256 "1581d9fa267da7812302989329e6747c157a36b45ccc3f2c5d1aa97826016d54"
   end
 
-  ENV.append "CFLAGS", "-DLUA_INCLUDE_DIR=/usr/local/include/lua/"
-
   option "with-dev-mode", "Enable dev mode in Asterisk"
   option "with-clang", "Compile with clang (default)"
   option "with-gcc", "Compile with gcc instead of clang"
@@ -136,6 +134,8 @@ class Asterisk < Formula
 
     # Some Asterisk code doesn't follow strict aliasing rules
     ENV.append "CFLAGS", "-fno-strict-aliasing"
+    # Fix lua install directory
+    ENV.append "CFLAGS", "-DLUA_INCLUDE_DIR=/usr/local/include/lua/"
 
     system "./configure", "--prefix=#{prefix}",
                           "--sysconfdir=#{etc}",
