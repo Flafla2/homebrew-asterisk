@@ -59,10 +59,10 @@ class Asterisk < Formula
     end
   end
 
-  # patch do
-  #   url "https://raw.githubusercontent.com/Flafla2/homebrew-asterisk/master/patches/01-brew-fixed-lua-include.patch"
-  #   sha256 "1581d9fa267da7812302989329e6747c157a36b45ccc3f2c5d1aa97826016d54"
-  # end
+  patch do
+    url "https://raw.githubusercontent.com/Flafla2/homebrew-asterisk/master/patches/01-brew-fixed-lua-include.patch"
+    sha256 "1581d9fa267da7812302989329e6747c157a36b45ccc3f2c5d1aa97826016d54"
+  end
 
   option "with-dev-mode", "Enable dev mode in Asterisk"
   option "with-clang", "Compile with clang (default)"
