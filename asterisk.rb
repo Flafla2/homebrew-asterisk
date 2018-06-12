@@ -133,8 +133,7 @@ class Asterisk < Formula
     optimize = false if build.without? "optimizations"
 
     # Fix lua install directory
-    ENV["CMAKE_INCLUDE_PATH"] += ":/usr/local/Cellar/lua/5.3.4_4/include/lua"
-    ENV["CMAKE_LIBRARY_PATH"] += ":/usr/local/Cellar/lua/5.3.4_4/lib"
+    ENV.append "CFLAGS", "-I/usr/local/Cellar/lua/5.3.4_4/include/lua"
     ENV.append "CFLAGS", "-DLUA_INCLUDE_DIR=/usr/local/Cellar/lua/5.3.4_4/include/lua"
     # Some Asterisk code doesn't follow strict aliasing rules
     ENV.append "CFLAGS", "-fno-strict-aliasing"
